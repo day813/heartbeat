@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Beat</title>
+	<div>ZMC</div>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+	<div class="heart-name">赵梦辰</div>
+    <script src="js/three.min.js"></script>
+    <script src="js/MeshSurfaceSampler.js"></script>
+    <script src="js/TrackballControls.js"></script>
+    <script src="js/simplex-noise.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+<style>
+.heart-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 52px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(
+    270deg,
+    #ff005e,
+    #ff7b00,
+    #ffee00,
+    #21ff00,
+    #00f7ff,
+    #007bff,
+    #a800ff,
+    #ff00c8
+  );
+  background-size: 1600% 1600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease infinite, glow 1.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8),
+               0 0 20px rgba(255,255,255,0.6),
+               0 0 40px rgba(255,255,255,0.4);
+  z-index: 10;
+  pointer-events: none;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080; }
+  to   { text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff; }
+}
+</style>
+
+</html>
